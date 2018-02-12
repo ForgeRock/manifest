@@ -9,7 +9,7 @@
   <project name="linux-artik" path="linux" groups="artik530"/>
   <!-- <project name="build-artik" path="build-artik" groups="artik530"/> -->
   <project name="boot-firmwares-artik530" path="boot-firmwares-artik530" groups="artik530-bsp"/>
-  <!-- we obtain build.git from local_manifests/dev/xml -->
+  <!-- we obtain build.git from local_manifests/dev.xml -->
   <!-- <project name="build.git" path="build" remote="optee" revision="refs/tags/2.6.0">
     <linkfile dest="build/Makefile" src="artik530.mk"/>
   </project> -->
@@ -20,8 +20,5 @@
   <!-- we obtain optee_os.git from local_manifests/dev.xml -->
   <!-- <project name="optee_os.git" path="optee_os" remote="optee" revision="refs/tags/2.6.0"/> -->
   <project name="optee_test.git" path="optee_test" remote="optee" revision="refs/tags/2.6.0"/>
-  <!-- we add optee-manifest.git to obtain local_manifests/dev.xml -->
-  <remote fetch="https://github.com/ForgeRock/" name="fr-dev"/>
-  <project name="optee-manifest.git" path="optee-manifest" remote="fr-dev" revision="fr-dev"/>
 </manifest>
 
