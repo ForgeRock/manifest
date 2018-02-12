@@ -21,4 +21,6 @@ git clone -bfr-dev https://github.com/ForgeRock/optee-manifest.git
 mkdir .repo/local_manifests
 cp optee-manifest/local_manifests/dev.xml .repo/local_manifests/.
 ./repo sync
+cd build
+make
 ```
