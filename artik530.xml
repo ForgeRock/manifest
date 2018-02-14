@@ -9,14 +9,16 @@
   <project name="linux-artik" path="linux" groups="artik530"/>
   <!-- <project name="build-artik" path="build-artik" groups="artik530"/> -->
   <project name="boot-firmwares-artik530" path="boot-firmwares-artik530" groups="artik530-bsp"/>
-  <project name="build.git" path="build" remote="optee" revision="refs/tags/2.6.0">
+  <!-- we obtain build.git from local_manifests/dev.xml -->
+  <!-- <project name="build.git" path="build" remote="optee" revision="refs/tags/2.6.0">
     <linkfile dest="build/Makefile" src="artik530.mk"/>
-  </project>
+  </project> -->
   <project name="busybox.git" path="busybox" remote="busybox" revision="dbf5a6da6a4295ce26edd1ce34fde567d19afa02"/>
   <project name="gen_rootfs.git" path="gen_rootfs" remote="linaro-swg" revision="fe617d470e45778c909038bf3e7ca15174a4f893"/>
   <project name="optee_client.git" path="optee_client" remote="optee" revision="refs/tags/2.6.0"/>
   <project name="optee_examples.git" path="optee_examples" remote="linaro-swg" revision="refs/tags/2.6.0"/>
-  <project name="optee_os.git" path="optee_os" remote="optee" revision="refs/tags/2.6.0"/>
+  <!-- we obtain optee_os.git from local_manifests/dev.xml -->
+  <!-- <project name="optee_os.git" path="optee_os" remote="optee" revision="refs/tags/2.6.0"/> -->
   <project name="optee_test.git" path="optee_test" remote="optee" revision="refs/tags/2.6.0"/>
 </manifest>
 

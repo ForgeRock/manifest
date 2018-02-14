@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <remote fetch="https://github.com/ForgeRock/" name="fr-dev"/>
+  <project name="optee-build.git" path="build" remote="fr-dev" revision="artik530-support">
+    <linkfile dest="build/Makefile" src="artik530.mk"/>
+  </project>
+  <project name="optee-os.git" path="optee_os" remote="fr-dev" revision="artik530-support"/>
+</manifest>
+
