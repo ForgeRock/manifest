@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <remote fetch="https://github.com/OP-TEE" name="optee"/>
-  <remote fetch="git://busybox.net" name="busybox"/>
-  <remote fetch="https://github.com/linaro-swg" name="linaro-swg"/>
-  <remote fetch="https://github.com/SamsungARTIK/" name="artik"/>
-  <default remote="artik" revision="A530_os_3.0.0"/>
-  <project name="u-boot-artik" path="u-boot" groups="artik530"/>
-  <project name="linux-artik" path="linux" groups="artik530"/>
-  <!-- <project name="build-artik" path="build-artik" groups="artik530"/> -->
-  <project name="boot-firmwares-artik530" path="boot-firmwares-artik530" groups="artik530-bsp"/>
-  <project name="build.git" path="build" remote="optee" revision="refs/tags/2.6.0">
-    <linkfile dest="build/Makefile" src="artik530.mk"/>
-  </project>
-  <project name="busybox.git" path="busybox" remote="busybox" revision="dbf5a6da6a4295ce26edd1ce34fde567d19afa02"/>
-  <project name="gen_rootfs.git" path="gen_rootfs" remote="linaro-swg" revision="fe617d470e45778c909038bf3e7ca15174a4f893"/>
-  <project name="optee_client.git" path="optee_client" remote="optee" revision="refs/tags/2.6.0"/>
-  <project name="optee_examples.git" path="optee_examples" remote="linaro-swg" revision="refs/tags/2.6.0"/>
-  <project name="optee_os.git" path="optee_os" remote="optee" revision="refs/tags/2.6.0"/>
-  <project name="optee_test.git" path="optee_test" remote="optee" revision="refs/tags/2.6.0"/>
-</manifest>
+	<remote name="busybox" fetch="git://busybox.net" />
+	<remote name="linaro-swg" fetch="https://github.com/linaro-swg" />
+	<remote name="optee" fetch="https://github.com/OP-TEE" />
+	<remote name="artik" fetch="https://github.com/SamsungARTIK/" />
 
+	<default remote="optee" revision="master" />
+
+	<!-- OP-TEE gits -->
+	<project path="optee_os" name="optee_os.git" />
+	<project path="optee_client" name="optee_client.git" />
+	<project path="optee_test" name="optee_test.git" />
+
+    	<!-- Bootloaders 1 & 2 -->
+    <project remote="artik" path="boot-firmwares-artik530" name="boot-firmwares-artik530" groups="artik530-bsp" revision="A530_os_3.0.0"/>
+    <project remote="artik" path="u-boot" name="u-boot-artik" groups="artik530" revision="A530_os_3.0.0"/>
+ 
+	<!-- busybox -->
+	<project remote="busybox" path="busybox" name="busybox.git" revision="dbf5a6da6a4295ce26edd1ce34fde567d19afa02" />
+
+	<!-- Linux kernel -->
+    <project remote="artik" path="linux" name="linux-artik" groups="artik530" revision="A530_os_3.0.0"/>
+
+	<!-- Sample applications -->
+	<project remote="linaro-swg" path="optee_examples" name="optee_examples.git" />
+
+	<!-- Filesystem -->
+	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs.git" />
+
+	<!-- Build -->
+	<project remote="optee" path="build" name="build.git">
+        <linkfile src="artik530.mk" dest="build/Makefile" />
+	</project>
+</manifest>
