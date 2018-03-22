@@ -13,14 +13,14 @@
 	<project path="optee_test" name="optee_test.git" />
 
     	<!-- Bootloaders 1 & 2 -->
-    <project remote="artik" path="boot-firmwares-artik530" name="boot-firmwares-artik530" groups="artik530-bsp" revision="A530_os_3.0.0"/>
-    <project remote="artik" path="u-boot" name="u-boot-artik" groups="artik530-bsp" revision="A530_os_3.0.0"/>
+    <project remote="artik" path="boot-firmwares-artik5" name="boot-firmwares-artik5" groups="artik520-bsp" revision="A520_os_2.0.0"/>
+    <project remote="artik" path="u-boot" name="u-boot-artik" groups="artik520-bsp" revision="A520_os_2.0.0"/>
  
 	<!-- busybox -->
 	<project remote="busybox" path="busybox" name="busybox.git" revision="dbf5a6da6a4295ce26edd1ce34fde567d19afa02" />
 
 	<!-- Linux kernel -->
-    <project remote="artik" path="linux" name="linux-artik" groups="artik530-bsp" revision="A530_os_3.0.0"/>
+    <project remote="artik" path="linux" name="linux-artik" groups="artik520-bsp" revision="A520_os_2.0.0"/>
 
 	<!-- Sample applications -->
 	<project remote="linaro-swg" path="optee_examples" name="optee_examples.git" />
@@ -30,6 +30,6 @@
 
 	<!-- Build -->
 	<project remote="optee" path="build" name="build.git">
-        <linkfile src="artik530.mk" dest="build/Makefile" />
+        <linkfile src="artik520.mk" dest="build/Makefile" />
 	</project>
 </manifest>

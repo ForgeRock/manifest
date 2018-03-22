@@ -4,19 +4,18 @@
   <remote fetch="git://busybox.net" name="busybox"/>
   <remote fetch="https://github.com/linaro-swg" name="linaro-swg"/>
   <remote fetch="https://github.com/SamsungARTIK/" name="artik"/>
-  <default remote="artik" revision="A530_os_3.0.0"/>
-  <!-- <project name="build-artik" path="build-artik" groups="artik530-bsp"/> -->
-  <project name="boot-firmwares-artik530" path="boot-firmwares-artik530" groups="artik530-bsp"/>
+  <default remote="artik" revision="A520_os_2.0.0"/>
+  <!-- <project name="build-artik" path="build-artik" groups="artik520-bsp"/> -->
+  <project name="boot-firmwares-artik5" path="boot-firmwares-artik5" groups="artik520-bsp"/>
   <project name="build.git" path="build" remote="optee" revision="refs/tags/3.0.0">
-    <linkfile dest="build/Makefile" src="artik530.mk"/>
+    <linkfile dest="build/Makefile" src="artik520.mk"/>
   </project>
   <project name="busybox.git" path="busybox" remote="busybox" revision="dbf5a6da6a4295ce26edd1ce34fde567d19afa02"/>
   <project name="gen_rootfs.git" path="gen_rootfs" remote="linaro-swg" revision="d5429c154fb81fdae75886d505c385b2f0bb7153"/>
-  <project name="linux-artik" path="linux" groups="artik530-bsp"/>
+  <project name="linux-artik" path="linux" groups="artik520-bsp"/>
   <project name="optee_client.git" path="optee_client" remote="optee" revision="refs/tags/3.0.0"/>
   <project name="optee_examples.git" path="optee_examples" remote="linaro-swg" revision="refs/tags/3.0.0"/>
   <project name="optee_os.git" path="optee_os" remote="optee" revision="refs/tags/3.0.0"/>
   <project name="optee_test.git" path="optee_test" remote="optee" revision="refs/tags/3.0.0"/>
-  <project name="u-boot-artik" path="u-boot" groups="artik530-bsp"/>
+  <project name="u-boot-artik" path="u-boot" groups="artik520-bsp"/>
 </manifest>
-
