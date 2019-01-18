@@ -5,5 +5,6 @@
     <linkfile dest="build/Makefile" src="artik530.mk"/>
   </project>
   <project name="optee-os.git" path="optee_os" remote="fr-dev" revision="artik530-support"/>
+  <project name="optee-gen_rootfs.git" path="gen_rootfs" remote="fr-dev" revision="artik530-support"/>
 </manifest>
 
